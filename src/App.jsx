@@ -821,6 +821,7 @@ function RecyclerPortal({
   const [materialFilter, setMaterialFilter] = useState("All");
   const [offerPrice, setOfferPrice] = useState("290");
   const [rate, setRate] = useState(290);
+  const [menuOpen, setMenuOpen] = useState(false);
   const filteredLots = availableLots.filter(
     (lot) =>
       (materialFilter === "All" || lot.material === materialFilter) &&
@@ -829,6 +830,10 @@ function RecyclerPortal({
   const openLot = (lot) => {
     setSelectedLot(lot);
     go("lot-detail");
+  };
+  const selectPage = (next) => {
+    setMenuOpen(false);
+    go(next);
   };
   const nav = [
     { id: "dashboard", icon: "⌂", label: "Dashboard" },
@@ -924,22 +929,65 @@ function RecyclerPortal({
       </aside>
       <section className="portal-main">
         <div className="portal-mobile-head">
-          <button onClick={() => go("dashboard")}>☰</button>
+          <button
+            aria-label="Open recycler menu"
+            onClick={() => setMenuOpen(true)}
+          >
+            ☰
+          </button>
           <b>Recycler Partner Portal</b>
           <span>●</span>
         </div>
-        <nav className="portal-mobile-nav">
-          {nav.slice(0, 6).map((item) => (
-            <button
-              key={item.id}
-              className={page === item.id ? "active" : ""}
-              onClick={() => go(item.id)}
-            >
-              <span>{item.icon}</span>
-              {item.label}
+        {menuOpen && (
+          <div
+            className="mobile-menu-backdrop"
+            onClick={() => setMenuOpen(false)}
+          />
+        )}
+        <aside className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+          <div className="mobile-menu-top">
+            <div className="portal-brand">
+              <span className="brand-mark">♲</span>
+              <div>
+                <b>Kabadiwala</b>
+                <strong>Connect</strong>
+              </div>
+            </div>
+            <button aria-label="Close menu" onClick={() => setMenuOpen(false)}>
+              ×
             </button>
-          ))}
-        </nav>
+          </div>
+          <div className="mobile-menu-profile">
+            <span>GC</span>
+            <div>
+              <b>GreenCycle Recycling</b>
+              <small>VERIFIED — DEMO</small>
+            </div>
+          </div>
+          <nav>
+            {nav.map((item) => (
+              <button
+                key={item.id}
+                className={
+                  page === item.id ||
+                  (page === "lot-detail" && item.id === "lots")
+                    ? "active"
+                    : ""
+                }
+                onClick={() => selectPage(item.id)}
+              >
+                <span>{item.icon}</span>
+                {item.label}
+              </button>
+            ))}
+          </nav>
+          <button
+            className="mobile-collector-link"
+            onClick={() => selectPage("home")}
+          >
+            ← Collector App
+          </button>
+        </aside>
         {content}
       </section>
     </div>

@@ -1491,6 +1491,10 @@ h1 {
 .portal-mobile-head {
   display: none;
 }
+.mobile-menu,
+.mobile-menu-backdrop {
+  display: none;
+}
 .portal-title {
   display: flex;
   justify-content: space-between;
@@ -2457,31 +2461,118 @@ h1 {
     color: #35a56e;
     font-size: 12px;
   }
-  .portal-mobile-nav {
+  .mobile-menu-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: block;
+    background: rgba(19, 48, 37, 0.28);
+  }
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 11;
     display: flex;
-    gap: 5px;
-    overflow-x: auto;
-    margin: 0 -18px 22px;
-    padding: 0 18px 5px;
-    scrollbar-width: none;
-  }
-  .portal-mobile-nav::-webkit-scrollbar {
-    display: none;
-  }
-  .portal-mobile-nav button {
-    flex: 0 0 auto;
-    padding: 8px 10px;
-    border: 1px solid #dfeae1;
-    border-radius: 8px;
-    color: #718b80;
+    width: min(315px, 84vw);
+    flex-direction: column;
+    padding: 22px 16px;
     background: #fff;
-    font-size: 9px;
-    white-space: nowrap;
+    box-shadow: 10px 0 30px rgba(22, 63, 45, 0.18);
+    transform: translateX(-150%);
+    transition: transform 0.2s ease;
   }
-  .portal-mobile-nav button.active {
+  .mobile-menu.open {
+    transform: translateX(-50%);
+  }
+  .mobile-menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf2ed;
+  }
+  .mobile-menu-top .portal-brand {
+    padding: 0;
+    border: 0;
+  }
+  .mobile-menu-top > button {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    color: #54786a;
+    background: #f1f7f1;
+    font-size: 25px;
+    line-height: 1;
+  }
+  .mobile-menu-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 19px 7px;
+  }
+  .mobile-menu-profile > span {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     color: #fff;
-    border-color: #147858;
-    background: #147858;
+    background: #287f60;
+    font-size: 11px;
+    font-weight: 800;
+  }
+  .mobile-menu-profile b,
+  .mobile-menu-profile small {
+    display: block;
+  }
+  .mobile-menu-profile b {
+    font-size: 11px;
+  }
+  .mobile-menu-profile small {
+    margin-top: 3px;
+    color: #2c9964;
+    font-size: 8px;
+    font-weight: 800;
+  }
+  .mobile-menu nav {
+    display: grid;
+    gap: 3px;
+  }
+  .mobile-menu nav button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 10px;
+    border-radius: 8px;
+    color: #789087;
+    background: none;
+    text-align: left;
+    font-size: 12px;
+  }
+  .mobile-menu nav button span {
+    width: 20px;
+    color: #6d9684;
+    font-size: 18px;
+    text-align: center;
+  }
+  .mobile-menu nav button.active {
+    color: #12694e;
+    background: #e5f5e7;
+    font-weight: 800;
+  }
+  .mobile-menu nav button.active span {
+    color: #14845c;
+  }
+  .mobile-collector-link {
+    margin-top: auto;
+    padding: 14px 10px;
+    border-top: 1px solid #edf2ed;
+    color: #36775f;
+    background: none;
+    text-align: left;
+    font-size: 11px;
     font-weight: 800;
   }
   .portal-title h1 {
@@ -2813,5 +2904,119 @@ h1 {
     left: 9px;
     width: 2px;
     height: 24px;
+  }
+  .mobile-menu-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: block;
+    background: rgba(19, 48, 37, 0.28);
+  }
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    display: flex;
+    width: min(315px, 84vw);
+    flex-direction: column;
+    padding: 22px 16px;
+    background: #fff;
+    box-shadow: 10px 0 30px rgba(22, 63, 45, 0.18);
+    transform: translateX(-105%);
+    transition: transform 0.2s ease;
+  }
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+  .mobile-menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf2ed;
+  }
+  .mobile-menu-top .portal-brand {
+    padding: 0;
+    border: 0;
+  }
+  .mobile-menu-top > button {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    color: #54786a;
+    background: #f1f7f1;
+    font-size: 25px;
+    line-height: 1;
+  }
+  .mobile-menu-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 19px 7px;
+  }
+  .mobile-menu-profile > span {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: #fff;
+    background: #287f60;
+    font-size: 11px;
+    font-weight: 800;
+  }
+  .mobile-menu-profile b,
+  .mobile-menu-profile small {
+    display: block;
+  }
+  .mobile-menu-profile b {
+    font-size: 11px;
+  }
+  .mobile-menu-profile small {
+    margin-top: 3px;
+    color: #2c9964;
+    font-size: 8px;
+    font-weight: 800;
+  }
+  .mobile-menu nav {
+    display: grid;
+    gap: 3px;
+  }
+  .mobile-menu nav button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 10px;
+    border-radius: 8px;
+    color: #789087;
+    background: none;
+    text-align: left;
+    font-size: 12px;
+  }
+  .mobile-menu nav button span {
+    width: 20px;
+    color: #6d9684;
+    font-size: 18px;
+    text-align: center;
+  }
+  .mobile-menu nav button.active {
+    color: #12694e;
+    background: #e5f5e7;
+    font-weight: 800;
+  }
+  .mobile-menu nav button.active span {
+    color: #14845c;
+  }
+  .mobile-collector-link {
+    margin-top: auto;
+    padding: 14px 10px;
+    border-top: 1px solid #edf2ed;
+    color: #36775f;
+    background: none;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 800;
   }
 }
