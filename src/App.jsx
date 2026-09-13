@@ -953,7 +953,11 @@ function RecyclerPortal({
                 <strong>Connect</strong>
               </div>
             </div>
-            <button aria-label="Close menu" onClick={() => setMenuOpen(false)}>
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setMenuOpen(false)}
+            >
               ×
             </button>
           </div>

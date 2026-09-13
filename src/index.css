@@ -1495,6 +1495,12 @@ h1 {
 .mobile-menu-backdrop {
   display: none;
 }
+.mobile-menu {
+  pointer-events: none;
+}
+.mobile-menu.open {
+  pointer-events: auto;
+}
 .portal-title {
   display: flex;
   justify-content: space-between;
@@ -2498,6 +2504,8 @@ h1 {
     border: 0;
   }
   .mobile-menu-top > button {
+    position: relative;
+    z-index: 1;
     width: 34px;
     height: 34px;
     border-radius: 8px;
@@ -2505,6 +2513,7 @@ h1 {
     background: #f1f7f1;
     font-size: 25px;
     line-height: 1;
+    pointer-events: auto;
   }
   .mobile-menu-profile {
     display: flex;
