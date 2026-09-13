@@ -721,6 +721,43 @@ h1 {
   border: 1.5px solid #7bc493;
   box-shadow: 0 5px 14px #dceee0;
 }
+.incoming-offer-card {
+  display: grid;
+  gap: 7px;
+  margin: 18px 0;
+  padding: 16px;
+  border: 1.5px solid #7bc493;
+  border-radius: 14px;
+  background: #f0faef;
+  box-shadow: 0 5px 14px #dceee0;
+}
+.incoming-offer-card .eyebrow {
+  margin: 0 0 5px;
+  color: #2c8a61;
+}
+.incoming-offer-card h2 {
+  margin: 0;
+  color: #204537;
+  font-size: 15px;
+}
+.incoming-offer-card p:not(.eyebrow) {
+  margin: 4px 0 0;
+  color: #718b7e;
+  font-size: 10px;
+}
+.incoming-offer-card > strong {
+  color: #176d50;
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+.incoming-offer-card > small {
+  color: #789087;
+  font-size: 10px;
+}
+.incoming-offer-card .green-button {
+  width: 100%;
+  margin-top: 5px;
+}
 .recycler-avatar {
   display: grid;
   flex: 0 0 43px;

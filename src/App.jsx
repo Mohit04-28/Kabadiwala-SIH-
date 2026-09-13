@@ -108,6 +108,7 @@ function App() {
   const [weight, setWeight] = useState("10");
   const [photo, setPhoto] = useState(false);
   const [offerSubmitted, setOfferSubmitted] = useState(false);
+  const [collectorOffer, setCollectorOffer] = useState(null);
   const [pickupStep, setPickupStep] = useState(1);
   const [handoverConfirmed, setHandoverConfirmed] = useState(false);
   const [paymentPaid, setPaymentPaid] = useState(false);
@@ -204,6 +205,7 @@ function App() {
             go={go}
             offerSubmitted={offerSubmitted}
             setOfferSubmitted={setOfferSubmitted}
+            setCollectorOffer={setCollectorOffer}
             pickupStep={pickupStep}
             setPickupStep={setPickupStep}
             handoverConfirmed={handoverConfirmed}
@@ -213,7 +215,14 @@ function App() {
           />
         ) : (
           <>
-            {page === "home" && <Home t={t} go={go} />}
+            {page === "home" && (
+              <Home
+                t={t}
+                go={go}
+                collectorOffer={collectorOffer}
+                setCollectorOffer={setCollectorOffer}
+              />
+            )}
             {page === "create" && (
               <Create
                 t={t}
@@ -243,6 +252,8 @@ function App() {
                 material={material}
                 weight={weight}
                 value={value}
+                collectorOffer={collectorOffer}
+                setCollectorOffer={setCollectorOffer}
               />
             )}
             {page === "confirm" && (
@@ -251,11 +262,18 @@ function App() {
                 material={material}
                 weight={weight}
                 value={value}
+                collectorOffer={collectorOffer}
                 go={go}
               />
             )}
             {page === "receipt" && (
-              <Receipt t={t} weight={weight} value={value} go={go} />
+              <Receipt
+                t={t}
+                weight={weight}
+                value={value}
+                collectorOffer={collectorOffer}
+                go={go}
+              />
             )}
             {page === "earnings" && <Earnings t={t} />}
             {page === "safety" && <Safety t={t} />}
@@ -367,7 +385,7 @@ function RoleChooser({ lang, setLang, chooseRole }) {
   );
 }
 
-function Home({ t, go }) {
+function Home({ t, go, collectorOffer, setCollectorOffer }) {
   return (
     <>
       <section className="hero">
@@ -396,6 +414,13 @@ function Home({ t, go }) {
         </div>
         <strong>₹2,900</strong>
       </div>
+      {collectorOffer && (
+        <IncomingOffer
+          offer={collectorOffer}
+          setOffer={setCollectorOffer}
+          go={go}
+        />
+      )}
       <div className="feature-grid">
         <button onClick={() => go("prices")}>
           <span className="feature-icon yellow-bg">₹</span>
@@ -586,7 +611,7 @@ function Prices({ t }) {
   );
 }
 
-function Recyclers({ t, go, material }) {
+function Recyclers({ t, go, material, collectorOffer, setCollectorOffer }) {
   return (
     <>
       <Header
@@ -603,6 +628,13 @@ function Recyclers({ t, go, material }) {
         best
         onClick={() => go("confirm")}
       />
+      {collectorOffer && (
+        <IncomingOffer
+          offer={collectorOffer}
+          setOffer={setCollectorOffer}
+          go={go}
+        />
+      )}
       <RecyclerCard
         name="EcoLoop Materials"
         distance="13.1 km"
@@ -638,7 +670,41 @@ const RecyclerCard = ({ name, distance, offer, pickup, best, onClick }) => (
   </div>
 );
 
-function Confirm({ t, material, weight, value, go }) {
+function IncomingOffer({ offer, setOffer, go }) {
+  const accepted = offer.status === "accepted";
+  return (
+    <section className="incoming-offer-card">
+      <div>
+        <p className="eyebrow">NEW RECYCLER OFFER</p>
+        <h2>{offer.recycler}</h2>
+        <p>
+          {offer.material} • {offer.weight} kg • {offer.lotId}
+        </p>
+      </div>
+      <strong>{money(offer.total)}</strong>
+      <small>{money(offer.perKg)}/kg offered by the recycler</small>
+      {accepted ? (
+        <div className="success-banner">
+          ✓ Offer accepted · Ready to confirm
+        </div>
+      ) : (
+        <button
+          className="green-button"
+          onClick={() => {
+            setOffer({ ...offer, status: "accepted" });
+            go("confirm");
+          }}
+        >
+          Accept Offer →
+        </button>
+      )}
+    </section>
+  );
+}
+
+function Confirm({ t, material, weight, value, collectorOffer, go }) {
+  const agreedValue =
+    collectorOffer?.status === "accepted" ? collectorOffer.total : value;
   return (
     <>
       <Header
@@ -662,8 +728,8 @@ function Confirm({ t, material, weight, value, go }) {
           <b>GreenCycle Recycling</b>
         </div>
         <div className="confirm-row">
-          <span>Quoted price</span>
-          <b className="green-text">₹{value.toLocaleString("en-IN")}</b>
+          <span>{collectorOffer ? "Recycler offer" : "Quoted price"}</span>
+          <b className="green-text">{money(agreedValue)}</b>
         </div>
         <div className="location-demo">
           ⌖ GPS captured <b>Demo location</b>
@@ -674,7 +740,9 @@ function Confirm({ t, material, weight, value, go }) {
     </>
   );
 }
-function Receipt({ t, weight, value, go }) {
+function Receipt({ t, weight, value, collectorOffer, go }) {
+  const finalValue =
+    collectorOffer?.status === "accepted" ? collectorOffer.total : value;
   return (
     <div className="receipt-page">
       <div className="success-mark">✓</div>
@@ -700,7 +768,7 @@ function Receipt({ t, weight, value, go }) {
           <span>
             Final value
             <br />
-            <b>₹{value.toLocaleString("en-IN")}</b>
+            <b>{money(finalValue)}</b>
           </span>
           <span>
             Payment
@@ -809,6 +877,7 @@ function RecyclerPortal({
   go,
   offerSubmitted,
   setOfferSubmitted,
+  setCollectorOffer,
   pickupStep,
   setPickupStep,
   handoverConfirmed,
@@ -868,6 +937,7 @@ function RecyclerPortal({
         setOfferPrice={setOfferPrice}
         offerSubmitted={offerSubmitted}
         setOfferSubmitted={setOfferSubmitted}
+        setCollectorOffer={setCollectorOffer}
         go={go}
       />
     ) : page === "pickup" ? (
@@ -1279,6 +1349,7 @@ function Offers({
   setOfferPrice,
   offerSubmitted,
   setOfferSubmitted,
+  setCollectorOffer,
 }) {
   return (
     <>
@@ -1337,7 +1408,19 @@ function Offers({
         ) : (
           <button
             className="green-button"
-            onClick={() => setOfferSubmitted(true)}
+            onClick={() => {
+              const perKg = Number(offerPrice || 0);
+              setOfferSubmitted(true);
+              setCollectorOffer({
+                lotId: "KC-2026-00124",
+                material: "PCB",
+                weight: 10,
+                recycler: "GreenCycle Recycling",
+                perKg,
+                total: perKg * 10,
+                status: "pending",
+              });
+            }}
           >
             Submit Offer →
           </button>
