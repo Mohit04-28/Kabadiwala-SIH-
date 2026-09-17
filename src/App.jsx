@@ -95,6 +95,139 @@ const copy = {
     ledger: "कमाई का हिसाब",
     safetyTitle: "सुरक्षा पहले",
     dashboard: "पार्टनर डैशबोर्ड",
+    offline: "ऑफलाइन तैयार",
+    switchRole: "भूमिका बदलें",
+    newLot: "नया लॉट",
+    threeSteps: "केवल 3 आसान चरण",
+    addPhoto: "फोटो जोड़ें",
+    identifyMaterial: "सामग्री पहचानने में मदद मिलेगी",
+    photoAdded: "फोटो जोड़ दी गई",
+    selectMaterial: "सामग्री चुनें",
+    sellingToday: "आज आप क्या बेच रहे हैं?",
+    approximateWeight: "लगभग वजन",
+    enterWeight: "वजन किलोग्राम में दर्ज करें",
+    getEstimate: "कीमत का अनुमान लें",
+    stepTwo: "चरण 2 / 3",
+    estimateSub: "आपके लॉट की अनुमानित कीमत",
+    materialDetected: "सामग्री पहचानी गई",
+    estimatedValue: "अनुमानित कीमत",
+    marketRange: "बाजार सीमा",
+    bestOffer: "रीसायकलर का सबसे अच्छा ऑफर",
+    prototypeEstimate: "प्रोटोटाइप अनुमान • बिक्री से पहले अंतिम दर जांचें",
+    matchedLot: "आपके लॉट के लिए मिलान",
+    matchedSub: "दर, दूरी और पिकअप के आधार पर डेमो पार्टनर",
+    bestMatch: "✦ सबसे अच्छा मिलान",
+    pickupAvailable: "पिकअप उपलब्ध",
+    selfDrop: "खुद जमा करें",
+    verifiedDemo: "✓ सत्यापित डेमो",
+    selectRecycler: "रीसायकलर चुनें",
+    recyclerData:
+      "ⓘ काल्पनिक डेमो रीसायकलर डेटा • प्रोटोटाइप के लिए प्राधिकरण दिखाया गया है",
+    almostDone: "लगभग पूरा",
+    confirmSub: "रिकॉर्ड बनाने से पहले विवरण जांचें",
+    lotId: "लॉट आईडी",
+    materialLabel: "सामग्री",
+    recyclerLabel: "रीसायकलर",
+    recyclerOffer: "रीसायकलर ऑफर",
+    quotedPrice: "बताई गई कीमत",
+    demoLocation: "डेमो स्थान",
+    confirmReceipt: "पुष्टि करें और रसीद बनाएं",
+    digitalTraceability: "डिजिटल ट्रेसबिलिटी",
+    handoverRecord: "डिजिटल हैंडओवर रिकॉर्ड बनाया गया",
+    reference: "संदर्भ",
+    lot: "लॉट",
+    weightLabel: "वजन",
+    finalValue: "अंतिम कीमत",
+    payment: "भुगतान",
+    paid: "भुगतान हुआ ✓",
+    qrReference: "सत्यापित QR / संदर्भ",
+    viewEarnings: "कमाई देखें",
+    records: "आपके रिकॉर्ड",
+    recordsSub: "हर बिक्री एक आसान जगह पर",
+    totalEarnings: "कुल दर्ज कमाई",
+    completedTransactions: "3 पूर्ण लेनदेन",
+    recentTransactions: "हाल के लेनदेन",
+    safetyEyebrow: "अपना ध्यान रखें",
+    safetySub: "छोटे कदम आपको और हमारे ग्रह को सुरक्षित रखते हैं",
+    lowConnectivity: "कम कनेक्टिविटी मोड",
+    syncData: "कनेक्टिविटी लौटने पर आपका डेटा सिंक हो जाएगा।",
+  },
+  mr: {
+    home: "मुख्यपृष्ठ",
+    prices: "दर",
+    recycler: "रीसायकलर",
+    earnings: "कमाई",
+    safety: "सुरक्षा",
+    welcome: "नमस्कार, डेमो कलेक्टर",
+    tagline: "ई-कचरा सुरक्षितपणे आणि योग्य दरात विका",
+    create: "ई-कचऱ्याचा लॉट तयार करा",
+    active: "सक्रिय लॉट",
+    looking: "रीसायकलर शोधत आहे",
+    board: "आजचा दर",
+    boardSub: "डेमो दर • जागा आणि स्थितीनुसार दर बदलू शकतो",
+    find: "अधिकृत रीसायकलर शोधा",
+    estimate: "किंमतीचा अंदाज",
+    confirm: "हँडओव्हरची पुष्टी करा",
+    receipt: "हँडओव्हर पूर्ण झाले",
+    ledger: "कमाईचा हिशोब",
+    safetyTitle: "सुरक्षा प्रथम",
+    dashboard: "पार्टनर डॅशबोर्ड",
+    offline: "ऑफलाइन तयार",
+    switchRole: "भूमिका बदला",
+    newLot: "नवीन लॉट",
+    threeSteps: "फक्त 3 सोप्या पायऱ्या",
+    addPhoto: "फोटो जोडा",
+    identifyMaterial: "तुमची सामग्री ओळखण्यास मदत होईल",
+    photoAdded: "फोटो जोडला",
+    selectMaterial: "सामग्री निवडा",
+    sellingToday: "आज तुम्ही काय विकत आहात?",
+    approximateWeight: "अंदाजे वजन",
+    enterWeight: "वजन किलोग्रॅममध्ये भरा",
+    getEstimate: "किंमतीचा अंदाज घ्या",
+    stepTwo: "पायरी 2 / 3",
+    estimateSub: "तुमच्या लॉटची अंदाजे किंमत",
+    materialDetected: "सामग्री ओळखली",
+    estimatedValue: "अंदाजे किंमत",
+    marketRange: "बाजाराची श्रेणी",
+    bestOffer: "रीसायकलरचा सर्वोत्तम ऑफर",
+    prototypeEstimate: "प्रोटोटाइप अंदाज • विक्रीपूर्वी अंतिम दर तपासा",
+    matchedLot: "तुमच्या लॉटसाठी जुळले",
+    matchedSub: "दर, अंतर आणि पिकअपनुसार डेमो पार्टनर",
+    bestMatch: "✦ सर्वोत्तम जुळणी",
+    pickupAvailable: "पिकअप उपलब्ध",
+    selfDrop: "स्वतः जमा करा",
+    verifiedDemo: "✓ सत्यापित डेमो",
+    selectRecycler: "रीसायकलर निवडा",
+    recyclerData:
+      "ⓘ काल्पनिक डेमो रीसायकलर डेटा • प्रोटोटाइपसाठी अधिकृतता दाखवली आहे",
+    almostDone: "जवळजवळ पूर्ण",
+    confirmSub: "रेकॉर्ड तयार करण्यापूर्वी तपशील तपासा",
+    lotId: "लॉट आयडी",
+    materialLabel: "सामग्री",
+    recyclerLabel: "रीसायकलर",
+    recyclerOffer: "रीसायकलर ऑफर",
+    quotedPrice: "सांगितलेली किंमत",
+    demoLocation: "डेमो ठिकाण",
+    confirmReceipt: "पुष्टी करा आणि पावती तयार करा",
+    digitalTraceability: "डिजिटल ट्रेसिबिलिटी",
+    handoverRecord: "डिजिटल हँडओव्हर रेकॉर्ड तयार झाले",
+    reference: "संदर्भ",
+    lot: "लॉट",
+    weightLabel: "वजन",
+    finalValue: "अंतिम किंमत",
+    payment: "पेमेंट",
+    paid: "पेमेंट झाले ✓",
+    qrReference: "पडताळता येणारा QR / संदर्भ",
+    viewEarnings: "कमाई पहा",
+    records: "तुमचे रेकॉर्ड",
+    recordsSub: "प्रत्येक विक्री एका सोप्या ठिकाणी",
+    totalEarnings: "एकूण नोंदलेली कमाई",
+    completedTransactions: "3 पूर्ण व्यवहार",
+    recentTransactions: "अलीकडील व्यवहार",
+    safetyEyebrow: "स्वतःची काळजी घ्या",
+    safetySub: "लहान पावले तुम्हाला आणि आपल्या ग्रहाला सुरक्षित ठेवतात",
+    lowConnectivity: "कमी कनेक्टिव्हिटी मोड",
+    syncData: "कनेक्टिव्हिटी परत आल्यावर तुमचा डेटा सिंक होईल.",
   },
 };
 
@@ -183,16 +316,11 @@ function App() {
         </div>
         <div className="top-actions">
           <span className="offline">
-            <i /> Offline-ready
+            <i /> {t.offline || "Offline-ready"}
           </span>
-          <button
-            className="lang"
-            onClick={() => setLang(lang === "en" ? "hi" : "en")}
-          >
-            {lang === "en" ? "हिंदी" : "English"}
-          </button>
+          <LanguageSelect lang={lang} setLang={setLang} />
           <button className="role-switch" onClick={() => setRole(null)}>
-            Switch role
+            {t.switchRole || "Switch role"}
           </button>
         </div>
       </header>
@@ -318,8 +446,24 @@ const Button = ({ children, onClick, secondary = false }) => (
   </button>
 );
 
+function LanguageSelect({ lang, setLang }) {
+  return (
+    <select
+      className="lang"
+      aria-label="Select language"
+      value={lang}
+      onChange={(event) => setLang(event.target.value)}
+    >
+      <option value="en">English</option>
+      <option value="hi">हिंदी</option>
+      <option value="mr">मराठी</option>
+    </select>
+  );
+}
+
 function RoleChooser({ lang, setLang, chooseRole }) {
   const hindi = lang === "hi";
+  const marathi = lang === "mr";
   return (
     <div className="role-screen">
       <header className="topbar role-topbar">
@@ -330,20 +474,26 @@ function RoleChooser({ lang, setLang, chooseRole }) {
             <strong>Connect</strong>
           </span>
         </div>
-        <button className="lang" onClick={() => setLang(hindi ? "en" : "hi")}>
-          {hindi ? "English" : "हिंदी"}
-        </button>
+        <LanguageSelect lang={lang} setLang={setLang} />
       </header>
       <main className="role-content">
         <div className="role-symbol">♲</div>
         <p className="eyebrow">
           KABADIWALA CONNECT <span className="demo-pill">DEMO</span>
         </p>
-        <h1>{hindi ? "आप कौन हैं?" : "How are you joining today?"}</h1>
+        <h1>
+          {hindi
+            ? "आप कौन हैं?"
+            : marathi
+              ? "आज तुम्ही कसे जोडत आहात?"
+              : "How are you joining today?"}
+        </h1>
         <p className="role-subtitle">
           {hindi
             ? "अपना काम चुनें और शुरू करें"
-            : "Choose your work to get started"}
+            : marathi
+              ? "सुरुवात करण्यासाठी तुमचे काम निवडा"
+              : "Choose your work to get started"}
         </p>
         <div className="role-options">
           <button
@@ -352,11 +502,15 @@ function RoleChooser({ lang, setLang, chooseRole }) {
           >
             <span>♲</span>
             <div>
-              <b>{hindi ? "कबाड़ीवाला" : "Kabadiwala"}</b>
+              <b>
+                {hindi ? "कबाड़ीवाला" : marathi ? "भंगारवाला" : "Kabadiwala"}
+              </b>
               <small>
                 {hindi
                   ? "ई-कचरा बेचें और कमाई देखें"
-                  : "Sell e-waste and track earnings"}
+                  : marathi
+                    ? "ई-कचरा विका आणि कमाई पहा"
+                    : "Sell e-waste and track earnings"}
               </small>
             </div>
             <strong>→</strong>
@@ -367,18 +521,27 @@ function RoleChooser({ lang, setLang, chooseRole }) {
           >
             <span>▣</span>
             <div>
-              <b>{hindi ? "रीसायकलर पार्टनर" : "Recycler Partner"}</b>
+              <b>
+                {hindi || marathi ? "रीसायकलर पार्टनर" : "Recycler Partner"}
+              </b>
               <small>
                 {hindi
                   ? "लॉट स्वीकार करें और पिकअप संभालें"
-                  : "Accept lots and manage pickups"}
+                  : marathi
+                    ? "लॉट स्वीकारा आणि पिकअप सांभाळा"
+                    : "Accept lots and manage pickups"}
               </small>
             </div>
             <strong>→</strong>
           </button>
         </div>
         <div className="role-note">
-          <i /> Prototype demo • Choose either view to explore
+          <i />{" "}
+          {hindi
+            ? "प्रोटोटाइप डेमो • किसी भी दृश्य को चुनकर देखें"
+            : marathi
+              ? "प्रोटोटाइप डेमो • पाहण्यासाठी कोणतेही दृश्य निवडा"
+              : "Prototype demo • Choose either view to explore"}
         </div>
       </main>
     </div>
@@ -463,27 +626,35 @@ function Create({
 }) {
   return (
     <>
-      <Header eyebrow="NEW LOT" title={t.create} sub="Only 3 simple steps" />
+      <Header
+        eyebrow={t.newLot || "NEW LOT"}
+        title={t.create}
+        sub={t.threeSteps || "Only 3 simple steps"}
+      />
       <div className="step-list">
         <div className="step">
           <span className="step-num">1</span>
           <div className="step-content">
-            <b>Add a photo</b>
-            <small>Helps us identify your material</small>
+            <b>{t.addPhoto || "Add a photo"}</b>
+            <small>
+              {t.identifyMaterial || "Helps us identify your material"}
+            </small>
             <button
               className={`photo-box ${photo ? "added" : ""}`}
               onClick={() => setPhoto(true)}
             >
               <span>{photo ? "✓" : "▣"}</span>
-              {photo ? "Photo added" : "Add Photo"}
+              {photo
+                ? t.photoAdded || "Photo added"
+                : t.addPhoto || "Add Photo"}
             </button>
           </div>
         </div>
         <div className="step">
           <span className="step-num">2</span>
           <div className="step-content">
-            <b>Select material</b>
-            <small>What are you selling today?</small>
+            <b>{t.selectMaterial || "Select material"}</b>
+            <small>{t.sellingToday || "What are you selling today?"}</small>
             <div className="material-scroll">
               {materials.map((item) => (
                 <button
@@ -501,8 +672,8 @@ function Create({
         <div className="step">
           <span className="step-num">3</span>
           <div className="step-content">
-            <b>Approximate weight</b>
-            <small>Enter weight in kilograms</small>
+            <b>{t.approximateWeight || "Approximate weight"}</b>
+            <small>{t.enterWeight || "Enter weight in kilograms"}</small>
             <label className="weight-input">
               <input
                 type="number"
@@ -515,7 +686,9 @@ function Create({
           </div>
         </div>
       </div>
-      <Button onClick={() => go("estimate")}>Get Value Estimate</Button>
+      <Button onClick={() => go("estimate")}>
+        {t.getEstimate || "Get Value Estimate"}
+      </Button>
     </>
   );
 }
@@ -524,40 +697,42 @@ function Estimate({ t, material, weight, value, go }) {
   return (
     <>
       <Header
-        eyebrow="STEP 2 OF 3"
+        eyebrow={t.stepTwo || "STEP 2 OF 3"}
         title={t.estimate}
-        sub="Here is an approximate value for your lot"
+        sub={t.estimateSub || "Here is an approximate value for your lot"}
       />
       <div className="estimate-card">
         <div className="ai-chip">✦ SIMULATED AI DETECTION</div>
         <div className="detected">
           <span className="large-material">{material.icon}</span>
           <div>
-            <small>Material detected</small>
+            <small>{t.materialDetected || "Material detected"}</small>
             <h2>{material.name}</h2>
             <p>{weight} kg • 94% confidence</p>
           </div>
           <span className="check">✓</span>
         </div>
         <div className="big-value">
-          <small>Estimated value</small>
+          <small>{t.estimatedValue || "Estimated value"}</small>
           <strong>₹{value.toLocaleString("en-IN")}</strong>
           <span>₹{material.rate}/kg</span>
         </div>
         <div className="range-row">
-          <span>Market range</span>
+          <span>{t.marketRange || "Market range"}</span>
           <b>
             ₹{Math.round(value * 0.86).toLocaleString("en-IN")} – ₹
             {Math.round(value * 1.07).toLocaleString("en-IN")}
           </b>
         </div>
         <div className="best-offer">
-          <span>BEST RECYCLER OFFER</span>
+          <span>{t.bestOffer || "BEST RECYCLER OFFER"}</span>
           <b>₹{material.rate}/kg</b>
         </div>
       </div>
       <p className="prototype-note">
-        ⓘ Prototype estimate • verify the final rate before sale
+        ⓘ{" "}
+        {t.prototypeEstimate ||
+          "Prototype estimate • verify the final rate before sale"}
       </p>
       <Button onClick={() => go("recyclers")}>{t.find}</Button>
     </>
@@ -615,16 +790,19 @@ function Recyclers({ t, go, material, collectorOffer, setCollectorOffer }) {
   return (
     <>
       <Header
-        eyebrow="MATCHED FOR YOUR LOT"
+        eyebrow={t.matchedLot || "MATCHED FOR YOUR LOT"}
         title={t.recycler}
-        sub="Demo partners matched by rate, distance and pickup"
+        sub={
+          t.matchedSub || "Demo partners matched by rate, distance and pickup"
+        }
       />
-      <div className="best-match">✦ BEST MATCH</div>
+      <div className="best-match">{t.bestMatch || "✦ BEST MATCH"}</div>
       <RecyclerCard
+        t={t}
         name="GreenCycle Recycling"
         distance="8.4 km"
         offer={material.rate}
-        pickup="Pickup available"
+        pickup={t.pickupAvailable || "Pickup available"}
         best
         onClick={() => go("confirm")}
       />
@@ -636,35 +814,37 @@ function Recyclers({ t, go, material, collectorOffer, setCollectorOffer }) {
         />
       )}
       <RecyclerCard
+        t={t}
         name="EcoLoop Materials"
         distance="13.1 km"
         offer={material.rate - 15}
-        pickup="Self-drop"
+        pickup={t.selfDrop || "Self-drop"}
         onClick={() => go("confirm")}
       />
       <p className="prototype-note">
-        ⓘ Fictional demo recycler data • authorization shown for prototype only
+        {t.recyclerData ||
+          "ⓘ Fictional demo recycler data • authorization shown for prototype only"}
       </p>
     </>
   );
 }
-const RecyclerCard = ({ name, distance, offer, pickup, best, onClick }) => (
+const RecyclerCard = ({ t, name, distance, offer, pickup, best, onClick }) => (
   <div className={`recycler-card ${best ? "best" : ""}`}>
     <div className="recycler-avatar">♲</div>
     <div className="recycler-main">
       <div className="recycler-title">
         <b>{name}</b>
-        {best && <span>✓ Verified demo</span>}
+        {best && <span>{t.verifiedDemo || "✓ Verified demo"}</span>}
       </div>
       <p>
         ⌖ {distance} &nbsp; • &nbsp; {pickup}
       </p>
       <strong>
         ₹{offer}
-        <small>/kg offer</small>
+        <small>{t.perKgOffer || "/kg offer"}</small>
       </strong>
       <button onClick={onClick}>
-        Select Recycler <span>→</span>
+        {t.selectRecycler || "Select Recycler"} <span>→</span>
       </button>
     </div>
   </div>
@@ -708,35 +888,41 @@ function Confirm({ t, material, weight, value, collectorOffer, go }) {
   return (
     <>
       <Header
-        eyebrow="ALMOST DONE"
+        eyebrow={t.almostDone || "ALMOST DONE"}
         title={t.confirm}
-        sub="Check the details before we create your record"
+        sub={t.confirmSub || "Check the details before we create your record"}
       />
       <div className="confirm-card">
         <div className="confirm-row">
-          <span>Lot ID</span>
+          <span>{t.lotId || "Lot ID"}</span>
           <b>KC-2026-00124</b>
         </div>
         <div className="confirm-row">
-          <span>Material</span>
+          <span>{t.materialLabel || "Material"}</span>
           <b>
             {material.name} • {weight} kg
           </b>
         </div>
         <div className="confirm-row">
-          <span>Recycler</span>
+          <span>{t.recyclerLabel || "Recycler"}</span>
           <b>GreenCycle Recycling</b>
         </div>
         <div className="confirm-row">
-          <span>{collectorOffer ? "Recycler offer" : "Quoted price"}</span>
+          <span>
+            {collectorOffer
+              ? t.recyclerOffer || "Recycler offer"
+              : t.quotedPrice || "Quoted price"}
+          </span>
           <b className="green-text">{money(agreedValue)}</b>
         </div>
         <div className="location-demo">
-          ⌖ GPS captured <b>Demo location</b>
+          ⌖ GPS captured <b>{t.demoLocation || "Demo location"}</b>
           <small>12 Sep 2026 • Demo timestamp</small>
         </div>
       </div>
-      <Button onClick={() => go("receipt")}>Confirm & Generate Receipt</Button>
+      <Button onClick={() => go("receipt")}>
+        {t.confirmReceipt || "Confirm & Generate Receipt"}
+      </Button>
     </>
   );
 }
@@ -746,41 +932,47 @@ function Receipt({ t, weight, value, collectorOffer, go }) {
   return (
     <div className="receipt-page">
       <div className="success-mark">✓</div>
-      <p className="eyebrow">DIGITAL TRACEABILITY</p>
+      <p className="eyebrow">
+        {t.digitalTraceability || "DIGITAL TRACEABILITY"}
+      </p>
       <h1>{t.receipt}</h1>
-      <p className="subtle">Digital handover record created</p>
+      <p className="subtle">
+        {t.handoverRecord || "Digital handover record created"}
+      </p>
       <div className="receipt-card">
         <div className="receipt-top">
-          <span>Reference</span>
+          <span>{t.reference || "Reference"}</span>
           <b>KC-HO-874321</b>
         </div>
         <div className="receipt-grid">
           <span>
-            Lot
+            {t.lot || "Lot"}
             <br />
             <b>KC-2026-00124</b>
           </span>
           <span>
-            Weight
+            {t.weightLabel || "Weight"}
             <br />
             <b>{weight} kg</b>
           </span>
           <span>
-            Final value
+            {t.finalValue || "Final value"}
             <br />
             <b>{money(finalValue)}</b>
           </span>
           <span>
-            Payment
+            {t.payment || "Payment"}
             <br />
-            <b className="green-text">Paid ✓</b>
+            <b className="green-text">{t.paid || "Paid ✓"}</b>
           </span>
         </div>
         <div className="qr">
-          ▦<small>Verifiable QR / Reference</small>
+          ▦<small>{t.qrReference || "Verifiable QR / Reference"}</small>
         </div>
       </div>
-      <Button onClick={() => go("earnings")}>View Earnings</Button>
+      <Button onClick={() => go("earnings")}>
+        {t.viewEarnings || "View Earnings"}
+      </Button>
     </div>
   );
 }
